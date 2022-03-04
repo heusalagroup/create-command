@@ -108,7 +108,7 @@ export class GitUtils {
 
         const parentPath = path.dirname(modulePath);
 
-        // mkdir -p src/fi/nor
+        // mkdir -p src/fi/hg
         LOG.debug(`initSubModule: Creating: `, parentPath)
         SyncFileUtils.mkdirp(parentPath);
 

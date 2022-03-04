@@ -31,11 +31,6 @@ export const BUILD_VERSION : string  = /* @__PURE__ */parseNonEmptyString('%{BUI
 /**
  * @__PURE__
  */
-export const BUILD_BACKEND_URL : string  = /* @__PURE__ */parseNonEmptyString('%{BUILD_BACKEND_URL}') ?? 'http://0.0.0.0:3000';
-
-/**
- * @__PURE__
- */
 export const BUILD_COMMAND_NAME : string  = /* @__PURE__ */parseNonEmptyString('%{BUILD_COMMAND_NAME}') ?? 'hg-command';
 
 /**

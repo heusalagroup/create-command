@@ -14,11 +14,11 @@
   },
   "tags": [
     "typescript",
-    "backend",
-    "rest",
-    "nodejs",
-    "spring",
-    "spring-boot"
+    "bin",
+    "shell",
+    "command",
+    "cli",
+    "nodejs"
   ],
   "author": "Jaakko Heusala <jhh@heusalagroup.fi>",
   "license": "MIT",
