@@ -1,21 +1,13 @@
 # GIT-ORGANISATION/PROJECT-NAME
 
-### Start the server in development mode
+### Install the command globally
 
 ```
-npm start
+npm i -g @GIT-ORGANISATION/PROJECT-NAME
 ```
 
-### Build the server
+### Use it
 
 ```
-npm run build
+PROJECT-NAME --help 
 ```
-
-### Start the server in production mode
-
-```
-npm run start-prod
-```
-
-...and open http://0.0.0.0:3000
