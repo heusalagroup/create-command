@@ -1,6 +1,6 @@
 {
   "name": "@heusalagroup/create-command",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create NodeJS commands with our TypeScript core pre-configured",
   "main": "index.js",
   "bin": "./dist/create-command.js",

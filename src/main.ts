@@ -3,9 +3,11 @@
 import path from "path";
 
 import {
-    DEFAULT_EXECA_STDIO,
+    CORE_PACKAGE_GIT_BRANCH,
+    CORE_PACKAGE_GIT_PATH, CORE_PACKAGE_GIT_URL,
+    DEFAULT_EXECA_STDIO, DEFAULT_GIT_ORGANIZATION,
     DEFAULT_INSTALLED_PACKAGES,
-    DEFAULT_LOG_LEVEL,
+    DEFAULT_LOG_LEVEL, DEFAULT_ORGANIZATION_EMAIL, DEFAULT_ORGANIZATION_NAME,
     PREFERED_PACKAGE_SYSTEM
 } from "./constants/runtime";
 
@@ -81,9 +83,9 @@ export async function main () : Promise<void> {
     const currentYear = (new Date().getFullYear());
 
     const replacements = {
-        'GIT-ORGANISATION' : `@heusalagroup`,
-        'ORGANISATION-NAME' : `Heusala Group Ltd`,
-        'ORGANISATION-EMAIL' : `info@heusalagroup.fi`,
+        'GIT-ORGANISATION' : DEFAULT_GIT_ORGANIZATION,
+        'ORGANISATION-NAME' : DEFAULT_ORGANIZATION_NAME,
+        'ORGANISATION-EMAIL' : DEFAULT_ORGANIZATION_EMAIL,
         'CURRENT-YEAR' : `${currentYear}`,
         'PROJECT-NAME' : mainName,
         'projectName' : camelCase(mainName)
@@ -147,8 +149,8 @@ export async function main () : Promise<void> {
         LOG.warn(`Warning! No changes to package.json detected`);
     }
 
-    LOG.debug(`Initializing git sub module: sendanor/typescript from main branch`);
-    await GitUtils.initSubModule('git@github.com:sendanor/typescript.git', 'src/fi/hg/ts', 'main');
+    LOG.debug(`Initializing core git submodule from ${CORE_PACKAGE_GIT_URL} and branch ${CORE_PACKAGE_GIT_BRANCH}`);
+    await GitUtils.initSubModule(CORE_PACKAGE_GIT_URL, path.resolve('src/', CORE_PACKAGE_GIT_PATH), CORE_PACKAGE_GIT_BRANCH);
 
     LOG.debug(`Installing packages: `, DEFAULT_INSTALLED_PACKAGES);
     await install(
