@@ -87,7 +87,7 @@ export function getMainUsage (
 
   Environment variables:
 
-    BACKEND_LOG_LEVEL as one of:
+    LOG_LEVEL as one of:
     
       ALL
       DEBUG
