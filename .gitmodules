@@ -1,0 +1,8 @@
+[submodule "src/fi/nor/ts"]
+	path = src/fi/nor/ts
+	url = git@github.com:sendanor/typescript.git
+	branch = main
+[submodule "src/fi/hg/core"]
+	branch = main
+	path = src/fi/hg/core
+	url = git@github.com:heusalagroup/fi.hg.core.git
