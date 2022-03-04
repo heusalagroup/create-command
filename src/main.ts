@@ -95,14 +95,11 @@ export async function main () : Promise<void> {
     SyncFileUtils.copyTextFileWithReplacementsIfMissing(path.resolve(templatesDir, "./LICENSE"), path.resolve(pkgDir, "./LICENSE"), replacements);
     SyncFileUtils.copyTextFileWithReplacementsIfMissing(path.resolve(templatesDir, "./README.md"), path.resolve(pkgDir, "./README.md"), replacements);
     SyncFileUtils.copyTextFileWithReplacementsIfMissing(path.resolve(templatesDir, "./gitignore"), path.resolve(pkgDir, "./.gitignore"), replacements);
-    SyncFileUtils.copyTextFileWithReplacementsIfMissing(path.resolve(templatesDir, "./Dockerfile"), path.resolve(pkgDir, "./Dockerfile"), replacements);
-    SyncFileUtils.copyTextFileWithReplacementsIfMissing(path.resolve(templatesDir, "./docker-compose.yml"), path.resolve(pkgDir, "./docker-compose.yml"), replacements);
     SyncFileUtils.copyTextFileWithReplacementsIfMissing(path.resolve(templatesDir, "./babel.config.json"), path.resolve(pkgDir, "./babel.config.json"), replacements);
     SyncFileUtils.copyTextFileWithReplacementsIfMissing(path.resolve(templatesDir, "./rollup.config.js"), path.resolve(pkgDir, "./rollup.config.js"), replacements);
     SyncFileUtils.copyTextFileWithReplacementsIfMissing(path.resolve(templatesDir, "./tsconfig.json"), path.resolve(pkgDir, "./tsconfig.json"), replacements);
     SyncFileUtils.copyTextFileWithReplacementsIfMissing(path.resolve(templatesDir, "./src/constants/build.ts"), path.resolve(srcConstantsDir, "./build.ts"), replacements);
     SyncFileUtils.copyTextFileWithReplacementsIfMissing(path.resolve(templatesDir, "./src/constants/runtime.ts"), path.resolve(srcConstantsDir, "./runtime.ts"), replacements);
-    SyncFileUtils.copyTextFileWithReplacementsIfMissing(path.resolve(templatesDir, "./src/controllers/BackendController.ts"), path.resolve(srcControllersDir, "./BackendController.ts"), replacements);
     SyncFileUtils.copyTextFileWithReplacementsIfMissing(path.resolve(templatesDir, "./src/main.ts"), path.resolve(srcDir, "./main.ts"), replacements);
 
     const mainFileName = `./${mainName}.ts`;
@@ -166,8 +163,6 @@ export async function main () : Promise<void> {
             "./README.md",
             "./.gitignore",
             "./.gitmodules",
-            "./Dockerfile",
-            "./docker-compose.yml",
             "./babel.config.json",
             "./rollup.config.js",
             "./tsconfig.json",
