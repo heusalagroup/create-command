@@ -1402,28 +1402,29 @@ return t.ERROR;case"FALSE":case"OFF":case"QUIET":case"SILENT":case"NONE":return 
 n=process.argv.slice(2).filter(e=>!e.startsWith("-")).shift())&&(n=R.default.resolve(e,n),L.debug(
 "Creating project directory: ",n),C.mkdirp(n),process.chdir(n),e=n),n={dev:!1,exact:!1,noSave:!1,bundle:!1,verbose:!1,
 global:!1,prefer:"npm",stdio:Pa,cwd:e},L.debug("Initial install config: ",n),r=await wi.getPackageManager(n),L.debug(
-"Initializing package.json using ",r),r=r,s=process.argv.slice(2).filter(e=>e.startsWith("-")),is.debug("Executing: ",r,
-"init",...s),await ve(r,["init",...s],{stdio:Pa}),r=R.default.resolve("package.json"),C.fileExists(r)){if(
-s=R.default.dirname(r),a=R.default.resolve(__dirname,"../templates"),o=R.default.basename(s),c=R.default.resolve(s,
-"./src"),u=R.default.resolve(c,"./constants"),i=R.default.resolve(c,"./controllers"),L.debug("Creating directory: ",u),
-C.mkdirp(u),L.debug("Creating directory: ",i),C.mkdirp(i),i={"GIT-ORGANISATION":"@heusalagroup",
+"Initializing package.json using ",r),r=r,c=process.argv.slice(2).filter(e=>e.startsWith("-")),is.debug("Executing: ",r,
+"init",...c),await ve(r,["init",...c],{stdio:Pa}),r=R.default.resolve("package.json"),C.fileExists(r)){if(
+c=R.default.dirname(r),u=R.default.resolve(__dirname,"../templates"),o=R.default.basename(c),a=R.default.resolve(c,
+"./src"),i=R.default.resolve(a,"./constants"),s=R.default.resolve(a,"./controllers"),L.debug("Creating directory: ",i),
+C.mkdirp(i),L.debug("Creating directory: ",s),C.mkdirp(s),s={"GIT-ORGANISATION":"@heusalagroup",
 "ORGANISATION-NAME":"Heusala Group","ORGANISATION-EMAIL":"info@heusalagroup.fi","CURRENT-YEAR":""+(new Date
 ).getFullYear(),"PROJECT-NAME":o,projectName:Lu.exports.camelCase(o)},L.debug("Initializing git if necessary"),
-await N.initGit(),C.copyTextFileWithReplacementsIfMissing(R.default.resolve(a,"./LICENSE"),R.default.resolve(s,
-"./LICENSE"),i),C.copyTextFileWithReplacementsIfMissing(R.default.resolve(a,"./README.md"),R.default.resolve(s,
-"./README.md"),i),C.copyTextFileWithReplacementsIfMissing(R.default.resolve(a,"./gitignore"),R.default.resolve(s,
-"./.gitignore"),i),C.copyTextFileWithReplacementsIfMissing(R.default.resolve(a,"./babel.config.json"),R.default.resolve(
-s,"./babel.config.json"),i),C.copyTextFileWithReplacementsIfMissing(R.default.resolve(a,"./rollup.config.js"),
-R.default.resolve(s,"./rollup.config.js"),i),C.copyTextFileWithReplacementsIfMissing(R.default.resolve(a,
-"./tsconfig.json"),R.default.resolve(s,"./tsconfig.json"),i),C.copyTextFileWithReplacementsIfMissing(R.default.resolve(a
-,"./src/constants/build.ts"),R.default.resolve(u,"./build.ts"),i),C.copyTextFileWithReplacementsIfMissing(
-R.default.resolve(a,"./src/constants/runtime.ts"),R.default.resolve(u,"./runtime.ts"),i),
-C.copyTextFileWithReplacementsIfMissing(R.default.resolve(a,"./src/main.ts"),R.default.resolve(c,"./main.ts"),i),
-s=`./${o}.ts`,u=`./src/${o}.ts`,C.copyTextFileWithReplacementsIfMissing(R.default.resolve(a,"./src/project-name.ts"),
-R.default.resolve(c,s),i),a=`./dist/${o}.js`,!be(c=C.readJsonFile(r)))throw new TypeError("package.json was invalid");
-let e=null!=(s=null==c?void 0:c.scripts)?s:{},t=(be(e)||(e={}),null!=(i=null==c?void 0:c.bin)?i:{});be(t)||(t={}),s=$($(
-{},c),{},{private:!0,main:a,bin:$($({},t),{},{[o]:a}),scripts:$($({},e),{},{"start-prod":"node "+a,start:"ts-node "+u,
-build:"rollup -c"})}),bi(s,c)?L.warn("Warning! No changes to package.json detected"):C.writeJsonFile(r,s),L.debug(
+await N.initGit(),C.copyTextFileWithReplacementsIfMissing(R.default.resolve(u,"./LICENSE"),R.default.resolve(c,
+"./LICENSE"),s),C.copyTextFileWithReplacementsIfMissing(R.default.resolve(u,"./README.md"),R.default.resolve(c,
+"./README.md"),s),C.copyTextFileWithReplacementsIfMissing(R.default.resolve(u,"./gitignore"),R.default.resolve(c,
+"./.gitignore"),s),C.copyTextFileWithReplacementsIfMissing(R.default.resolve(u,"./babel.config.json"),R.default.resolve(
+c,"./babel.config.json"),s),C.copyTextFileWithReplacementsIfMissing(R.default.resolve(u,"./rollup.config.js"),
+R.default.resolve(c,"./rollup.config.js"),s),C.copyTextFileWithReplacementsIfMissing(R.default.resolve(u,
+"./tsconfig.json"),R.default.resolve(c,"./tsconfig.json"),s),C.copyTextFileWithReplacementsIfMissing(R.default.resolve(u
+,"./src/constants/build.ts"),R.default.resolve(i,"./build.ts"),s),C.copyTextFileWithReplacementsIfMissing(
+R.default.resolve(u,"./src/constants/runtime.ts"),R.default.resolve(i,"./runtime.ts"),s),
+C.copyTextFileWithReplacementsIfMissing(R.default.resolve(u,"./src/main.ts"),R.default.resolve(a,"./main.ts"),s),
+c=`./${o}.ts`,i=`./src/${o}.ts`,C.copyTextFileWithReplacementsIfMissing(R.default.resolve(u,"./src/project-name.ts"),
+R.default.resolve(a,c),s),u=`./dist/${o}.js`,!be(a=C.readJsonFile(r)))throw new TypeError("package.json was invalid");
+let e=null!=(c=null==a?void 0:a.scripts)?c:{},t=(be(e)||(e={}),null!=(s=null==a?void 0:a.bin)?s:{});be(t)||(t={}),
+c=a.dependencies,s=$($({},a),{},{private:!0,main:u,bin:$($({},t),{},{[o]:u}),scripts:$($({},e),{},{
+"start-prod":"node "+u,start:"ts-node "+i,build:"rollup -c"}),dependencies:{},devDependencies:c}),bi(s,a)?L.warn(
+"Warning! No changes to package.json detected"):C.writeJsonFile(r,s),L.debug(
 `Initializing core git submodule from ${Ta} and branch main`),await N.initSubModule(Ta,R.default.resolve("src/",
 "fi/hg/core"),"main"),L.debug("Installing packages: ",ka),await wi.install(ka,n),L.debug("Adding files to git"),
 await N.addFiles(["./LICENSE","./README.md","./.gitignore","./.gitmodules","./babel.config.json","./rollup.config.js",

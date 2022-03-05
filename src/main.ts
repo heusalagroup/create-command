@@ -127,6 +127,8 @@ export async function main () : Promise<void> {
         binObject = {};
     }
 
+    const { dependencies } = pkgJSON;
+
     const newPkgJson = {
         ...pkgJSON,
         private: true,
@@ -140,7 +142,9 @@ export async function main () : Promise<void> {
             "start-prod": `node ${distFile}`,
             "start": `ts-node ${mainSrcFileName}`,
             "build": "rollup -c"
-        }
+        },
+        dependencies: {},
+        devDependencies: dependencies
     };
 
     if (!isEqual(newPkgJson, pkgJSON)) {
