@@ -5,7 +5,6 @@
   "organizationEmail": "info@heusalagroup.fi",
   "sourceDir": "./src",
   "buildDir": "./dist",
-  "templatesDir": "../templates",
   "mainSourceFileTemplate": "./src/project-name.ts",
   "files": [
     "./LICENSE",

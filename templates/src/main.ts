@@ -10,7 +10,8 @@ import {
     LOG_LEVEL
 } from "./constants/runtime";
 
-import { LogService, LogLevel } from "./fi/hg/core/LogService";
+import { LogService } from "./fi/hg/core/LogService";
+import { LogLevel } from "./fi/hg/core/types/LogLevel";
 
 LogService.setLogLevel(LOG_LEVEL);
 
