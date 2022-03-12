@@ -23,12 +23,14 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "typeRoots": [
+      "./create.d.ts",
       "./node_modules/@types/"
     ],
     "noEmit": true
 
   },
   "include": [
+    "./create.d.ts",
     "./src/create-command.ts"
   ]
 }
