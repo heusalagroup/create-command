@@ -55,6 +55,8 @@ export async function main (
             LOG.error('Error while shutting down the service: ', err);
         });
 
+        console.log(`Hello world`);
+
         return CommandExitStatus.OK;
 
     } catch (err) {
