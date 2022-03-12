@@ -9,14 +9,17 @@
   "files": [
     "./LICENSE",
     "./README.md",
-    "./.gitignore",
+    "./gitignore",
     "./babel.config.json",
     "./rollup.config.js",
     "./tsconfig.json",
     "./src/constants/build.ts",
     "./src/constants/runtime.ts",
     "./src/main.ts"
-  ],
+  ],,
+  "postRename": {
+    "./gitignore": "./.gitignore"
+  },
   "gitSubmodules": [
     {
       "url": "git@github.com:heusalagroup/fi.hg.core.git",
