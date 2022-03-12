@@ -17,7 +17,7 @@
     "./src/constants/runtime.ts",
     "./src/main.ts"
   ],
-  "postRename": {
+  "renameFiles": {
     "./gitignore": "./.gitignore"
   },
   "gitSubmodules": [

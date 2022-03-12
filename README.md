@@ -8,8 +8,8 @@ npm init @heusalagroup/command ./foo-command
 
 ## Log level
 
-Log level can be changed using `CREATE_COMMAND_LOG_LEVEL`, which defaults to `INFO`.
+Log level can be changed using `LOG_LEVEL`, which defaults to `INFO`.
 
 ```shell
-CREATE_COMMAND_LOG_LEVEL=DEBUG npm init @heusalagroup/command ./foo-command
+LOG_LEVEL=DEBUG npm init @heusalagroup/command ./foo-command
 ```
