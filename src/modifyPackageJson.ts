@@ -2,6 +2,7 @@
 
 import { parseReadonlyJsonObject, ReadonlyJsonObject } from "./fi/hg/core/Json";
 import { CreatePackageConfig } from "./fi/hg/create/types/CreatePackageConfig";
+import { isArrayOf, isString } from "./fi/hg/core/modules/lodash";
 
 export function modifyPackageJson (
     pkgJSON: ReadonlyJsonObject,
@@ -13,6 +14,7 @@ export function modifyPackageJson (
     const distFile = config.getDistFile();
     const mainName = config.getMainName();
     const mainSrcFileName = config.getMainSourceFileName();
+    const keywords : string[] = isArrayOf(pkgJSON?.keywords, isString) ? pkgJSON?.keywords as string[] : [];
     return {
         ...pkgJSON,
         private: true,
@@ -27,6 +29,15 @@ export function modifyPackageJson (
             "start": `ts-node ${mainSrcFileName}`,
             "build": "rollup -c"
         },
+        keywords: [
+            ...keywords,
+            "typescript",
+            "bin",
+            "shell",
+            "command",
+            "cli",
+            "nodejs"
+        ],
         dependencies: {},
         devDependencies: dependencies
     };
