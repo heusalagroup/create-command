@@ -23,14 +23,30 @@ describe("create-command", () => {
         run(`rm -rf "${TEMP_DIR}"`);
     });
 
-    it('should install command successfully', () => {
+    it('should install command successfully locally', () => {
+
+        // Build the factory tool
         run(`npm run build`);
-        run('node ./dist/create-command.js test-command --yes');
-        chdir(TEMP_DIR);
+
+        // Move to temporary directory
+        chdir(PATH.join(TEMP_DIR));
+
+        // Create the project from temporary directory
+        run(`node ${PROJECT_DIR}/dist/create-command.js test-command --yes`);
+
+        // Move to the new project directory
+        chdir(PATH.join(TEMP_DIR, 'test-command'));
+
+        // Install project packages
         run('npm install');
+
+        // Build the project
         run('npm run build');
+
+        // Test the built command
         const output = run('node ./dist/test-command.js').toString();
         expect(output).toMatch(/Hello world/);
+
     });
 
 });
