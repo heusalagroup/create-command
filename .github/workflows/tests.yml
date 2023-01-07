@@ -20,6 +20,11 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v3
+    - name: Set up Git
+      uses: actions/setup-git@v2
+      with:
+        git_user_email: bot@hg.fi
+        git_user_name: HG Bot
     - run: git submodule update --init --recursive
     - name: Use Node.js ${{ matrix.node-version }} on ${{ matrix.os }}
       uses: actions/setup-node@v3
