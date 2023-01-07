@@ -1,3 +1,5 @@
+![Tests](https://github.com/heusalagroup/create-command/actions/workflows/tests.yml/badge.svg)
+
 # @heusalagroup/create-command
 
 A command-line tool that makes it easy to create lightweight, zero-dependency
@@ -17,6 +19,13 @@ npm init @heusalagroup/command ./foo-command
 ```shell
 npm install -g @heusalagroup/command
 create-command ./foo-command
+```
+
+This command also accepts any argument from the `npm init` command. For example, 
+you can call it with `--yes` to answer "yes" to every question:
+
+```shell
+create-command ./foo-command --yes
 ```
 
 To increase the log level for debugging, set the `LOG_LEVEL` environment
