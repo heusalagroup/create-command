@@ -1,6 +1,6 @@
 {
   "name": "@heusalagroup/create-command",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Create NodeJS commands with HG's TypeScript core pre-configured",
   "main": "index.js",
   "bin": "./dist/create-command.js",
@@ -29,8 +29,8 @@
   },
   "homepage": "https://github.com/heusalagroup/create-command#readme",
   "devDependencies": {
-    "@types/node": "^17.0.21",
-    "@types/lodash": "^4.14.179",
+    "@types/node": "^18.11.18",
+    "@types/lodash": "^4.14.191",
     "execa": "^6.1.0",
     "pkg-install": "^1.0.0",
     "@babel/cli": "^7.17.6",
@@ -46,10 +46,10 @@
     "@rollup/plugin-typescript": "^8.3.1",
     "lodash": "^4.17.21",
     "reflect-metadata": "^0.1.13",
-    "rollup": "^2.68.0",
-    "rollup-plugin-uglify": "^6.0.4",
-    "ts-node": "^10.5.0",
-    "tslib": "^2.3.1",
-    "typescript": "^4.5.5"
+    "rollup": "^2.79.1",
+    "rollup-plugin-uglify": "github:heusalagroup/rollup-plugin-uglify",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.4"
   }
 }

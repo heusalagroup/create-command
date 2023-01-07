@@ -44,8 +44,8 @@
     "typescript",
     "tslib",
     "ts-node",
-    "rollup-plugin-uglify",
-    "rollup",
+    "heusalagroup/rollup-plugin-uglify",
+    "rollup@2.79.1",
     "lodash"
   ],
   "gitCommitMessage": "first commit",

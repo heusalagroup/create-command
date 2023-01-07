@@ -2,7 +2,8 @@
 
 import { parseReadonlyJsonObject, ReadonlyJsonObject } from "./fi/hg/core/Json";
 import { CreatePackageConfig } from "./fi/hg/create/types/CreatePackageConfig";
-import { isArrayOf, isString } from "./fi/hg/core/modules/lodash";
+import { isArrayOf } from "./fi/hg/core/types/Array";
+import { isString } from "./fi/hg/core/types/String";
 
 export function modifyPackageJson (
     pkgJSON: ReadonlyJsonObject,
