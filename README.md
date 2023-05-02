@@ -1,5 +1,7 @@
 ![Tests](https://github.com/heusalagroup/create-command/actions/workflows/tests.yml/badge.svg)
 
+**Join our [Discord](https://discord.gg/UBTrHxA78f) to discuss about our software!**
+
 # @heusalagroup/create-command
 
 A command-line tool that makes it easy to create lightweight, zero-dependency
