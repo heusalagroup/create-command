@@ -19,7 +19,7 @@ import { CommandExitStatus } from "./fi/hg/core/cmd/types/CommandExitStatus";
 import { RequestClient } from "./fi/hg/core/RequestClient";
 import { CommandArgumentUtils } from "./fi/hg/core/cmd/utils/CommandArgumentUtils";
 import { ParsedCommandArgumentStatus } from "./fi/hg/core/cmd/types/ParsedCommandArgumentStatus";
-import { Headers } from "./fi/hg/core/request/Headers";
+import { Headers } from "./fi/hg/core/request/types/Headers";
 import { BUILD_USAGE_URL, BUILD_WITH_FULL_USAGE } from "./constants/build";
 
 const LOG = LogService.createLogger('main');
