@@ -16,7 +16,7 @@ import { LogLevel } from "./fi/hg/core/types/LogLevel";
 LogService.setLogLevel(LOG_LEVEL);
 
 import { CommandExitStatus } from "./fi/hg/core/cmd/types/CommandExitStatus";
-import { RequestClient } from "./fi/hg/core/RequestClient";
+import { RequestClientImpl } from "./fi/hg/core/RequestClientImpl";
 import { CommandArgumentUtils } from "./fi/hg/core/cmd/utils/CommandArgumentUtils";
 import { ParsedCommandArgumentStatus } from "./fi/hg/core/cmd/types/ParsedCommandArgumentStatus";
 import { Headers } from "./fi/hg/core/request/types/Headers";
@@ -31,7 +31,7 @@ export async function main (
     try {
 
         Headers.setLogLevel(LogLevel.INFO);
-        RequestClient.setLogLevel(LogLevel.INFO);
+        RequestClientImpl.setLogLevel(LogLevel.INFO);
 
         LOG.debug(`Loglevel as ${LogService.getLogLevelString()}`);
 
